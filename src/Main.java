@@ -13,10 +13,17 @@ public class Main {
         System.out.println(c);
         System.out.println("teste");
         System.out.println("teste1");
-
+        System.out.println(" ");
         teste();
-
+        System.out.println(" ");
         datas();
+        System.out.println(" ");
+        lacosNumericos();
+
+        System.out.println(" ");
+        vetores();
+        System.out.println(" ");
+        tratnado_vetores();
     }
 
     private static void teste() {
@@ -45,5 +52,39 @@ public class Main {
         }
         System.out.printf("Olá, %s. Hoje é %s, %s.%n", nome, diaSemana, saudacao.toLowerCase());
     }
+
+    public static void lacosNumericos() {
+        for (int i = 1; i<=10; i++){
+            System.out.println(i);
+        }
+    }
+
+    public static void vetores(){
+        int[] numeros = new int[5];
+
+        for (int i = 0; i < numeros.length; i++){
+            System.out.println(numeros[i]);
+        }
+    }
+
+    public static void tratnado_vetores(){
+        int[] numeros = {1,3,4,1,10};
+        int maior = numeros[0];
+        int menor = numeros[0];
+        int media = 0;
+
+        for (int i = 0; i < numeros.length; i++){
+            if(numeros[i] > maior){
+                maior = numeros[i];
+            }
+            if(numeros[i] < menor ){
+                menor = numeros[i];
+            }
+            media += numeros[i];
+        }
+        System.out.println("Maior :" + maior + " Menor: " + menor + " Soma: " + media +" Média: " + (float) media/numeros.length );
+
+    }
+
 
 }
